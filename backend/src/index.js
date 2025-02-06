@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chatbot-sigma-ashen-27.vercel.app",
+    origin: "http://localhost:5173/",
     credentials: true,
   })
 );
