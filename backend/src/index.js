@@ -22,9 +22,11 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://chatbot-sigma-ashen-27.vercel.app/login",
-    ], // Add your frontend's deployed URL
-    credentials: true,
+      "https://chatbot-sigma-ashen-27.vercel.app/",
+    ], // Allow only requests from this origin
+    methods: "GET,POST", // Allow only these methods
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Allow cookies
   })
 );
 app.get("/", (req, res) => {
